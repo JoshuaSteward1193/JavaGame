@@ -14,4 +14,7 @@ public class TextPrint {
         out.println("1: Start a new game");
         out.println("2: Load a game from a file");        
     }
+    public static void roomTest(Room r){
+        out.println(r.getDescription());
+    }
 }

@@ -14,10 +14,11 @@ import java.util.Scanner;
  */
 public class TextAdventure {
 
-    /**
-     * @param args the command line arguments
-     */
+    static Room newRoom = new Room("This is a description");
+    
     public static void main(String[] args) {
+        
+        TextPrint.roomTest(newRoom);
         TextPrint.openingText();
         Scanner keyboard = new Scanner(System.in);
         boolean good = false;
