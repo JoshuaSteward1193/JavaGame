@@ -6,6 +6,7 @@
 package textadventure;
 
 import static java.lang.System.out;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,7 @@ import java.util.Scanner;
 public class TextAdventure {
 
     static Room newRoom = new Room("This is a description");
+    LinkedList roomChoices = new LinkedList();
     
     public static void main(String[] args) {
         
@@ -31,6 +33,7 @@ public class TextAdventure {
                 //it to choice
                 case 1:
                     GameVariables data = new GameVariables();
+                    out.println("Starting a new game");
                     good = true;
                     break;
                 case 2:
@@ -45,7 +48,13 @@ public class TextAdventure {
             }
         } while (!good);
         
-        
+        while (GameVariables.getPlayerHealth() > 0) {
+            out.println("-------------------------------------------------------------------");
+            TextPrint.currentRoom();            
+        }       
+    }
+    
+    public static void addChoice(String [] c){
         
     }
     

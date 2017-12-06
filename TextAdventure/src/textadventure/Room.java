@@ -12,14 +12,16 @@ import java.util.LinkedList;
  * @author Joshua
  */
 public class Room {
-    String description;
+    int currentDescription;
+    LinkedList descriptions = new LinkedList();
     LinkedList choices = new LinkedList();
     
     public Room(String d){
-        description = d;
+        currentDescription = 0;
+        descriptions.add(d);
     }
     public String getDescription(){
-        return description;
+        return (String) descriptions.get(currentDescription);
     }
     public void addChoice(String c){
         choices.add(c);
